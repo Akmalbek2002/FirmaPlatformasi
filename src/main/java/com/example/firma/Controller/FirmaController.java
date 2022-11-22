@@ -67,7 +67,7 @@ public class FirmaController {
           APIResponse apiResponse=firmaService.ishchiqoshish(ishchiDTO);
           return ResponseEntity.status(apiResponse.isHolat()?HttpStatus.OK:HttpStatus.ALREADY_REPORTED).body(apiResponse.getXabar());
     }
-    @GetMapping("/ishoqish/{id}")
+    @GetMapping("/ishchioqish/{id}")
     public HttpEntity<?> ishchioqish(@PathVariable Integer id){
           APIResponse apiResponse=firmaService.ishchioqish(id);
           return ResponseEntity.status(apiResponse.isHolat()?HttpStatus.OK:HttpStatus.NOT_FOUND).body(apiResponse.getXabar());
